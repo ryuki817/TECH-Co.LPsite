@@ -2,7 +2,6 @@
 
 body{
     background-color: #00b4b4;
-
 }
 
 header{
@@ -29,7 +28,7 @@ ul{
     font-family:"oswald", sans-serif;
     color: #fff;
 }
-
+/*問い合わせフォーム */
 .inq{
     width: 125px;
     border: 1px solid #fff;
@@ -38,7 +37,7 @@ ul{
     text-align: center;
     color: #fff;
 }
-
+/* トップタイトル */
 .kv{
     position: relative;
     background-color: #00b4b4;
