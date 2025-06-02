@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 :root{
-    --main-color:#fdf6e3 ;
-    --sub-color: #89cff0 ;
-    --accent-color: #333333;
+    --main-color:#89cff0  ;
+    --sub-color:#333333 ;
+    --accent-color: #fdf6e3;
 }
 
 
@@ -39,6 +39,10 @@ header ul{
     color: var(--main-color);
 }
 
+nav ul li:hover{
+    opacity: 0.7;
+}
+
 
 
 /* ------------------------------------------------ */
@@ -50,9 +54,9 @@ header ul{
 /*問い合わせボタン */
 .inq{
     width: 125px;
-    border: 1px solid var(--accent-color);
+    border: 3px solid var(--accent-color);
     border-radius: 120px;
-    padding: 5px;
+    padding: 8px;
     text-align: center;
     color: var(--main-color);
 }
@@ -62,6 +66,7 @@ header ul{
     background-color: var(--sub-color);
     width: 100%;
     height: 100vh;
+    border: none;
 }
 
 .kv div{
