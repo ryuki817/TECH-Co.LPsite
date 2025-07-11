@@ -52,3 +52,37 @@ document.querySelectorAll('.faq-question').forEach(button => {
         }
     });
 });
+
+
+
+// ハンバーガーメニュー
+let isMenuOpen = false;
+const hamburger = document.getElementById('hamburger');
+const neonMenu = document.getElementById('neon-menu');
+const overlay = document.getElementById('overlay');
+
+hamburger.addEventListener('click', () => {
+    if (isMenuOpen) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+});
+
+overlay.addEventListener('click', closeMenu);
+
+function openMenu() {
+    isMenuOpen = true;
+    hamburger.classList.add('active');
+    neonMenu.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+    isMenuOpen = false;
+    hamburger.classList.remove('active');
+    neonMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+};
