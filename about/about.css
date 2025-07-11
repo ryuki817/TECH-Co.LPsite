@@ -442,7 +442,7 @@ nav .inner li a {
     }
     .sec01 {
       position: relative;
-      height: auto;
+      height: 30vh;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
