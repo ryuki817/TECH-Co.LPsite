@@ -34,6 +34,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
 
     <script type="importmap">
         {
@@ -62,7 +66,7 @@
     <header>
         <h1>
             <a href="/">
-                <b>TECH&Co.</b>
+                <b class="logo">TECH&Co.</b>
             </a>
         </h1>
         <nav>
@@ -72,18 +76,17 @@
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#course">COURSE</a></li>
                 <li><a href="#achievements">ACHIEVEMENTS</a></li>
-                <li><a href="#member">MEMBER</a></li>
+                <li><a href="#team">MEMBER</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
-        <div class="inq">
-            <a target="_blank" rel="noopener noreferrer"
-                href="http://fob08b6rorx.typeform.com/to/BhnJYosz?typeform-source=www.kanoa-group.com">お問い合わせ</a>
-        </div>
+        <a target="_blank" rel="noopener noreferrer" class="inq"
+            href="http://fob08b6rorx.typeform.com/to/BhnJYosz?typeform-source=www.kanoa-group.com">お問い合わせ
+        </a>
     </header>
     <article class="kv">
         <div>
-            <h2>TECH&Co.</h2>
+            <h2 class="logo">TECH&Co.</h2>
             <span></span>
             <p>「個のスキル」を磨くWEBマーケティングスクール</p>
         </div>
@@ -93,8 +96,8 @@
             <h2>MESSAGE</h2>
             <div>
                 <img src="img/message.avif" alt>
-                <p>ここに説明文が入りますここに説明文が入ります<br>
-                    ここに説明文が入りますここに説明文が入ります
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti eligendi accusantium
+                    laborum voluptatem suscipit ipsa neque atque. Alias, modi.
                 </p>
             </div>
         </section>
@@ -105,18 +108,18 @@
             <div class="about">
                 <h3>FEATURES</h3>
                 <div>
-                    <p>01</p>
-                    <p>見出し</p>
+                    <p class="about-number">01</p>
+                    <p>実践的カリキュラム</p>
                     <p>本文</p>
                 </div>
                 <div>
-                    <p>02</p>
-                    <p>見出し</p>
+                    <p class="about-number">02</p>
+                    <p>個別サポート</p>
                     <p>本文</p>
                 </div>
                 <div>
-                    <p>03</p>
-                    <p>見出し</p>
+                    <p class="about-number">03</p>
+                    <p>案件・就職サポート</p>
                     <p>本文</p>
                 </div>
             </div>
@@ -130,26 +133,18 @@
                 <article class="js_service">
                     <img src="img/website.avif" alt="Web開発コース案内画像">
                     <h3>Web開発コース</h3>
-                    <div>
-                        <p>4 months</p>
-                    </div>
-                    <p>Web開発の基礎を学べます</p>
+                    <p>HTML,CSS,JavaScriptなど<br>
+                        LP,HP制作ができるようになります。</p>
                 </article>
                 <article class="js_service">
-                    <img src="img/app.avif" alt="Webアプリコース案内画像">
+                    <img src="img/website.avif" alt="Webアプリコース案内画像">
                     <h3>Webアプリコース</h3>
-                    <div>
-                        <p>6 months</p>
-                    </div>
                     <p>Webアプリの基礎を学べます</p>
                 </article>
                 <article class="js_service">
-                    <img src="img/adobi.avif" alt="ADOBEコース案内画像">
+                    <img src="img/website.avif" alt="ADOBEコース案内画像">
                     <h3>ADOBEコース</h3>
-                    <div>
-                        <p>4 months</p>
-                    </div>
-                    <p>ADOBEの基礎を学べます</p>
+                    <p>デザイン、動画編集を学ぶことができます。</p>
                 </article>
             </div>
 
@@ -159,37 +154,107 @@
             <h2>ACHIEVEMENTS</h2>
             <p>生徒さんの声、実績</p>
         </section>
-        <section id="member">
-            <h2>MEMBER</h2>
-            <p>TECH&Co.を支えるチームメンバー</p>
-            <div class="member">
-                <article>
-                    <img src="" alt="講師の写真">
-                    <p>メンター</p>
-                    <p>太田 琉希</p>
-                    <a href="">
-                        <img src="img/instagram.svg" alt="">
-                    </a>
-                </article>
-                <article>
-                    <img src="" alt="講師の写真">
-                    <p>メンター</p>
-                    <p>寺内 誠将</p>
-                </article>
-                <article>
-                    <img src="" alt="講師の写真">
-                    <p>メンター</p>
-                    <p>山本 帆斗</p>
-                </article>
+
+        <section class="section" id="team">
+            <div class="container">
+                <h2 class="section-title">MEMBER</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-avatar"></div>
+                        <div class="team-name">太田 琉希</div>
+                        <div class="team-role">メンター</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar"></div>
+                        <div class="team-name">山本 帆斗</div>
+                        <div class="team-role">メンター</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar"></div>
+                        <div class="team-name">赤瀬戸 大吾</div>
+                        <div class="team-role">メンター</div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">よくある質問</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            プログラミング未経験でも大丈夫ですか？
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            はい、全く問題ありません。当スクールの90%以上の受講生がプログラミング未経験からスタートしています。基礎から丁寧に指導し、一人ひとりのペースに合わせたサポートを提供します。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            受講期間はどのくらいですか？
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            コースにより異なりますが、4ヶ月から6ヶ月の期間設定となっています。働きながら学習される方のために、柔軟な学習スケジュールも提供しています。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            就職支援はありますか？
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            はい、充実した就職支援を提供しています。履歴書・職務経歴書の添削、面接対策、ポートフォリオ作成支援、企業紹介など、転職成功まで徹底的にサポートします。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            オンラインでの受講は可能ですか？
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            はい、全コースでオンライン受講のみとなります。全国どこからでも受講していただけます。録画授業の視聴も可能で、復習にも活用できます。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            分割払いは可能ですか？
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            はい、分割払いに対応しています。詳細はお気軽にご相談ください。
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="faq">
-            <h2>よくある質問</h2>
-            <p></p>
-        </section>
-        <footer>
 
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <div class="footer-logo">TECH&Co.</div>
+                        <div class="footer-description">
+                            あなたの未来を変える、最高のプログラミング教育をここから始めよう。
+                        </div>
+                        <div class="footer-contact">お問い合わせ</div>
+                        <p>📧 kanoaholdings2024@gmail.com</p>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-links">
+                            <a href="./about/index.html">特定商取引法</a>
+                            <a href="./privacy/index.html">プライバシーポリシー</a>
+                            <a href="http://fob08b6rorx.typeform.com/to/BhnJYosz?typeform-source=www.kanoa-group.com">お問い合わせ</a>
+                            <a href="https://www.kanoa-group.com/">会社概要</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 TECH&Co. All rights reserved.</p>
+                </div>
+            </div>
         </footer>
 </body>
 
