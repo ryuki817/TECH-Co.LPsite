@@ -154,10 +154,10 @@ section h2 {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    text-shadow:1px 1px 2px rgb(45, 9, 225);
+    text-shadow: 1px 1px 2px rgb(45, 9, 225);
 }
 
-#message div {
+.flex{
     padding-top: 30px;
     display: flex;
     justify-content: space-around;
@@ -168,6 +168,27 @@ section h2 {
     height: 50vh;
     object-fit: cover;
 }
+
+.message-text h3{
+    font-size:24px;
+    font-weight: bold;
+    color: var(--accent-color);
+    padding-bottom: 40px;
+}
+
+.message-text p {
+    text-align: left;
+    font-size: 18px;
+    color: var(--main-color);
+    line-height: 1.6;
+    letter-spacing: 0.7px;
+    padding: 0 20px;
+}
+
+.message-text p:not(:first-child) {
+    margin-top: 20px;
+}
+
 
 /*-------------- message --------------------*/
 
@@ -186,12 +207,12 @@ section h2 {
     margin-top: 50px;
 }
 
-.about h3{
+.about h3 {
     color: #00ff88;
     font-weight: bold;
     font-family: "Oswald";
     font-size: 20px;
-    text-shadow:1px 1px 2px rgb(107, 207, 112);
+    text-shadow: 1px 1px 2px rgb(107, 207, 112);
 }
 
 .about-number {
@@ -225,17 +246,22 @@ section h2 {
     margin-top: 50px;
 }
 
-.course article {
-    width: calc((100% - 40px) / 3);
-    padding: 20px;
+.course a{
+    display: block;    
+    width: calc((100% - 40px) / 3);    
     border: 1px solid #333;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    border-radius: 20px;    
+    padding: 20px;
 }
 
-.course article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 255, 136, 0.2);
+.js_service{
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.course a:hover {
+    box-shadow: 0 20px 40px rgb(59, 173, 255);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .js_service h3 {
@@ -248,6 +274,77 @@ section h2 {
 .js_service p {
     padding-top: 15px;
 }
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.course a:hover .hover-overlay{
+    opacity: 1;
+}
+
+.circle-btn{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    border: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+    position: relative;
+    overflow: hidden;
+    transform: scale(0);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.course a:hover .circle-btn {
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+.circle-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+}
+
+.circle-btn:hover::before {
+    width: 100px;
+    height: 100px;
+}
+
+.circle-btn span{
+    position: relative;
+    z-index: 1;
+    color: black;
+    background-color: transparent;
+}
+
 
 /* ------------ course ------------------------ */
 
@@ -464,7 +561,21 @@ footer {
     100% {
         text-shadow: 0 0 30px rgba(54, 255, 245, 0.544);
     }
+
 }
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 0 20px rgba(255, 107, 107, 0);
+    }
+}
+
 
 
 /* ----- レスポンシブ --------- */
@@ -578,8 +689,8 @@ footer {
     }
 
     .menu-content {
-        padding: 100px 50px 50px;
-        height: 100%;
+        padding: 10px 50px;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -649,7 +760,7 @@ footer {
         top: 0;
         left: -100%;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
         transition: left 0.5s;
         z-index: -1;
@@ -668,15 +779,17 @@ footer {
             inset 0 0 30px rgba(0, 255, 255, 0.2);
     }
 
-    .course,.about{
+    .course,
+    .about {
         flex-direction: column;
         align-items: center;
     }
 
-    .about div{
+    .about div {
         margin: 0;
     }
-    .course article {
+
+    .course a {
         width: 100%;
         margin: 0 auto;
     }

@@ -9,29 +9,29 @@ gsap.config({
 
 
 
-// スライドイン  
-gsap.fromTo(
-    ".js_service",
-    {
-        y: 200,
-        autoAlpha: 0,
-    },
-    {
-        y: 0,
-        autoAlpha: 1,
-        duration: 0.8,
-        ease: "Power4.inOut",
-        scrollTrigger: {
-            trigger: "#course",
-            start: "top top",
-            // markers:true,
-        },
-        stagger: {
-            each: 0.2,
-            from: "start",
-        },
-    }
-);
+// // スライドイン  
+// gsap.fromTo(
+//     ".js_service",
+//     {
+//         y: 200,
+//         autoAlpha: 0,
+//     },
+//     {
+//         y: 0,
+//         autoAlpha: 1,
+//         duration: 0.8,
+//         ease: "Power4.inOut",
+//         scrollTrigger: {
+//             trigger: "#course",
+//             start: "top top",
+//             // markers:true,
+//         },
+//         stagger: {
+//             each: 0.2,
+//             from: "start",
+//         },
+//     }
+// );
 
 
 
@@ -86,3 +86,20 @@ function closeMenu() {
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 };
+
+        // サークルボタンクリック時の処理
+        document.querySelectorAll('.circle-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // クリックアニメーション
+                this.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 100);
+                
+                // 実際の処理（例：詳細ページへの遷移など）
+                console.log('詳しく見るボタンがクリックされました');
+                alert('詳細ページに遷移します！');
+            });
+        });
